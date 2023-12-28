@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Montserrat;
+      }
+      .pdf-header-container {
+        width: 877px;
+        height: 1303px;
+        border: 1px solid black;
+      }
+      .header {
+        box-sizing: border-box;
+        margin: 29px 37px;
+      }
+      .body {
+        margin-top: 36px;
+      }
+      .congo-container {
+        text-align: center;
+      }
+      .congo-head {
+        font-family: Montserrat;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin: 0px auto;
+        color: rgba(0, 200, 83, 1);
+      }
+      .congo-text {
+        margin-top: 10px;
+        color: #6d6d6d;
+        font-size: 15.42px;
+        font-family: Montserrat;
+        font-weight: 500;
+        word-wrap: break-word;
+        display: flex;
+        justify-content: center;
+      }
+      .congo-text p {
+        margin: 0px;
+        width: 500px;
+      }
+      /***************************** profile card *********************************/
+      .profile-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+      }
+      .profile {
+        background: #f7f7f7;
+        border-radius: 14.79px;
+        width: 724px;
+        min-height: 171px;
+        border: 1px solid #d2d2d2;
+        display: flex;
+      }
+      .profile-picture {
+        margin: 10px 13.47px 10px 27px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .profile-content {
+        height: 100%;
+        width: auto;
+        margin: 24px 0px;
+      }
+      .profile-content .name {
+        color: black;
+        font-size: 18px;
+        font-family: Montserrat;
+        font-weight: 600;
+        word-wrap: break-word;
+      }
+      .profile-img {
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        border: 4px solid white;
+        object-fit: cover;
+      }
+      .profile-picture-container {
+        width: 69px;
+        height: 69px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f56a20;
+        border-radius: 50%;
+        border: 9.28px solid #e4e0df;
+      }
+      .heading {
+        display: flex;
+      }
+      .heading .count {
+        color: white;
+        font-size: 12px;
+        font-family: Montserrat;
+        font-weight: 500;
+        word-wrap: break-word;
+        background: #f16621;
+        height: 22px;
+        width: 122px;
+        border-radius: 11px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 11px;
+      }
+      .profile-content .content {
+        margin-top: 13px;
+        width: 526px;
+        text-align: left;
+        color: #6d6d6d;
+        font-size: 14px;
+        font-family: Montserrat;
+        font-weight: 500;
+        word-wrap: break-word;
+      }
+      .button-label {
+        color: #00c853;
+        font-size: 16px;
+        font-family: Montserrat;
+        font-weight: 600;
+        word-wrap: break-word;
+        padding: 6px 28px;
+      }
+      .action {
+        margin-top: 18px;
+      }
+      .action .button {
+        width: 206px;
+        height: 34px;
+        background: white;
+        border-radius: 27.5px;
+        border: 1px #00c853 solid;
+        display: flex;
+        justify-content: center;
+      }
+      /***************************** about section *********************************/
+      .about-container {
+        /* background: #f7f7f7; */
+        border-radius: 14.79px;
+        width: 724px;
+        min-height: 277px;
+        border: 1px solid #d2d2d2;
+        display: flex;
+      }
+      .about-container .about {
+        width: 440px;
+        height: 100%;
+        /* background: grey; */
+        text-align: left;
+        margin-left: 15px;
+      }
+      .about-heading {
+        margin: 16.24px 15px 12.84px 0px;
+        color: #ef6824;
+        font-size: 20px;
+        font-family: Montserrat;
+        font-weight: 600;
+        word-wrap: break-word;
+      }
+
+      .about-body {
+        color: #6c6c6c;
+        font-size: 16px;
+        font-family: Montserrat;
+        font-weight: 400;
+        word-wrap: break-word;
+      }
+      /***************************** upload-documents section *********************************/
+      .about-upload-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        text-align: left;
+      }
+      .upload-documents {
+        border-radius: 14.79px;
+        width: 724px;
+        min-height: 319px;
+        border: 1px solid #d2d2d2;
+        /* display: flex; */
+      }
+      .upload-heading {
+        margin: 16.24px 15px 0px 15px;
+        color: #ef6824;
+        font-size: 20px;
+        font-family: Montserrat;
+        font-weight: 600;
+        word-wrap: break-word;
+      }
+      .upload-description {
+        margin: 8px 15px 12.84px 15px;
+        color: #6c6c6c;
+        font-size: 14px;
+        font-family: Montserrat;
+        font-weight: 500;
+        word-wrap: break-word;
+      }
+      .upload-document-list ul {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        position: relative;
+        left: -50px;
+      }
+      li {
+        color: #555555;
+        font-size: 16px;
+        font-family: Montserrat;
+        font-weight: 600;
+        word-wrap: break-word;
+        height: 20px;
+        margin: 12px;
+      }
+      li {
+        list-style: none;
+      }
+
+      .upload-description ul .done::before {
+        content: "";
+        display: inline-block;
+        height: 7px;
+        width: 7px;
+        background-image: url("./assets/check_circle.png");
+        margin: 2px 12px 2px 0px;
+        background-repeat: no-repeat;
+      }
+
+      .upload-description ul .undone::before {
+        content: "";
+        display: inline-block;
+        height: 7px;
+        width: 7px;
+        background-image: url("./assets/dot_circle.png");
+        margin: 2px 12px 2px 0px;
+        background-repeat: no-repeat;
+      }
+
+      .upload-actions a {
+        text-decoration: none;
+      }
+
+      .upload-button {
+        border-radius: 27.5px;
+        width: 268.67px;
+        height: 40px;
+        background: #00c853;
+        text-align: center;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .upload-button-text{
+        color: white;
+                          font-size: 18px;
+                          font-family: Montserrat;
+                          font-weight: 600;
+                          word-wrap: break-word;
+      }
+
+      /* info-note */
+      .info-note-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+      }
+      .info-note {
+        width: 724px;
+        height: 100%;
+        display: flex;
+        background: rgba(248.5, 239.34, 156.9, 0.5);
+        border-radius: 10.79px;
+        border: 1px solid rgba(248.5, 239.34, 156.9, 0.5);
+        /*  */
+        color: #636363;
+        font-size: 13px;
+        font-family: Montserrat;
+        font-weight: 500;
+        word-wrap: break-word;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="pdf-header-container">
+        <div class="header">
+          <svg
+            class="header-img"
+            width="175"
+            height="31"
+            viewBox="0 0 175 31"
+            fill=""
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <mask
+              id="mask0_3625_1033"
+              style="mask-type: luminance"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="175"
+              height="31"
+            >
+              <path d="M174.618 0H0V30.6227H174.618V0Z" fill="white" />
+            </mask>
+            <g mask="url(#mask0_3625_1033)">
+              <path
+                d="M44.7961 29.5272L24.4224 0.29404C24.3366 0.171906 24.2137 0.0806129 24.0721 0.0336398C23.9304 -0.013333 23.7773 -0.0134955 23.6355 0.0331772C23.4937 0.0798499 23.3707 0.170883 23.2846 0.292835C23.1985 0.414787 23.1539 0.561191 23.1574 0.710427C23.1574 0.838286 23.1574 1.24788 23.1574 1.24788C23.1574 1.24788 23.1574 5.1006 23.1574 6.47082C23.1574 7.84107 27.3439 14.6368 27.0961 17.5379C26.863 20.2467 25.1658 21.7561 23.8488 21.9643C23.6686 21.9715 23.4982 22.0482 23.3734 22.1782C23.2485 22.3083 23.1787 22.4816 23.1787 22.6618C23.1787 22.8421 23.2485 23.0155 23.3734 23.1455C23.4982 23.2755 23.6686 23.3522 23.8488 23.3594C31.7296 23.8324 36.6956 28.1716 38.2186 29.6958C38.4394 29.9163 38.8058 30.2874 38.9212 30.4064C38.9861 30.4739 39.0636 30.5277 39.1494 30.5647C39.2356 30.6017 39.3279 30.621 39.4214 30.6213H44.2098C44.3377 30.6224 44.4634 30.5887 44.5735 30.5236C44.6836 30.4585 44.7739 30.3644 44.8343 30.2516C44.8947 30.1388 44.9231 30.0119 44.9163 29.884C44.9095 29.7565 44.868 29.633 44.7961 29.5272Z"
+                fill="#EF6824"
+              />
+              <path
+                d="M0.12071 29.5272L20.4988 0.29409C20.5848 0.172466 20.7076 0.0816504 20.849 0.0350013C20.9905 -0.0116477 21.1432 -0.0116675 21.2847 0.0349445C21.4262 0.0815563 21.549 0.17234 21.635 0.293942C21.721 0.415547 21.7658 0.561549 21.7627 0.71048C21.7627 0.838336 21.7627 1.24794 21.7627 1.24794C21.7627 1.24794 21.7627 5.10065 21.7627 6.4709C21.7627 7.84112 17.5762 14.6368 17.8251 17.538C18.0571 20.2467 19.7543 21.7562 21.0713 21.9643C21.2515 21.9716 21.4218 22.0483 21.5467 22.1783C21.6716 22.3083 21.7414 22.4816 21.7414 22.6619C21.7414 22.8422 21.6716 23.0155 21.5467 23.1455C21.4218 23.2755 21.2515 23.3522 21.0713 23.3595C13.1917 23.8324 8.22443 28.1717 6.70144 29.6958C6.4808 29.9163 6.11419 30.2875 5.9988 30.4064C5.93413 30.4739 5.8565 30.5278 5.77058 30.5648C5.68466 30.6018 5.5922 30.621 5.49868 30.6213H0.69777C0.570488 30.6213 0.445621 30.5867 0.33663 30.521C0.227641 30.4553 0.138662 30.3609 0.0792854 30.2484C0.0199087 30.1356 -0.00761366 30.009 -0.000313642 29.882C0.00698638 29.755 0.0488308 29.6322 0.12071 29.5272Z"
+                fill="#EF6824"
+              />
+              <path
+                d="M67.51 23.2058H57.046L55.3486 27.4897H48.854L59.2524 3.27582H65.7473L75.9032 27.4897H69.1677L67.51 23.2058ZM65.6451 18.3699L62.3289 9.73322L58.9434 18.3699H65.6451Z"
+                fill="#383838"
+              />
+              <path
+                d="M100.25 3.27325V7.42241L87.4641 22.4146H100.454V27.4928H79.0049V23.3764L91.7828 8.35138H79.4497V3.27325H100.25Z"
+                fill="#383838"
+              />
+              <path
+                d="M123.405 3.27325V8.31743H110.619V12.8434H122.16V17.8525L110.619 17.8876V22.4475H123.744V27.4905H104.301V3.27666L123.405 3.27325Z"
+                fill="#383838"
+              />
+              <path
+                d="M133.154 3.27325L144.14 17.8513V3.27325H150.012V27.4871H144.485L133.501 12.9803V27.4894H127.593V3.27553L133.154 3.27325Z"
+                fill="#383838"
+              />
+              <path
+                d="M174.618 3.27325V8.48942H167.366V27.4894H161.044V8.48942H153.856V3.27325H174.618Z"
+                fill="#383838"
+              />
+            </g>
+          </svg>
+        </div>
+        <div class="body">
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
